@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <img src="./assets/menu-bar.png" alt="" class="menu-icon">
+            <p>Meet App</p>
+            <img src="./assets/notification-bell.png" alt="" class="bell-icon">
+        </div>
+
+        <div class="main-text">
+            <h2>OUR TEAM</h2>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, vero blanditiis, veritatis
+                illum tempore sit incidunt ratione reiciendis minima eos tenetur est eaque eveniet odit. Enim sint saepe
+                dolore ipsa!</small>
+        </div>
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./assets/1.jpg" alt="">
+                    <div class="info">
+                        <h3>Thomas Mark</h3>
+                        <p>Founder CEO</p>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/2.jpg" alt="">
+                    <div class="info">
+                        <h3>Jane Smith</h3>
+                        <p>Marketing Director</p>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/3.jpg" alt="">
+                    <div class="info">
+                        <h3>John Doe</h3>
+                        <p>Lead Developer</p>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./assets/4.jpg" alt="">
+                    <div class="info">
+                        <h3>Emily Johnson</h3>
+                        <p>Design Lead</p>
+                        <a href="#">Contact</a>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <img src="./assets/5.jpg" alt="">
+                    <div class="info">
+                        <h3>Michael Brown</h3>
+                        <p>Sales Manager</p>
+                        <a href="#">Contact</a>
+                    </div>
+                </div> 
+            </div> 
+            <div class="swiper-pagination"></div>
+        </div>
+
+
+        <div class="footer-menu">
+            <img src="./assets/home-button.png" alt="">
+            <img src="./assets/search.png" alt="">
+            <img src="./assets/user.png" alt="">
+            <img src="./assets/undo.png" alt="">
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 50,
+        centeredSlides: true,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-card {
+            width: 100%;
+            /* max-width: 420px; */
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, .1);
+        }
+
+        #signinForm-wrapper {
+            max-width: 450px;
+        }
+
+        #registerForm-wrapper {
+            max-width: 60%;
+        }
+
+        .top-margin {
+            margin-top: 15px;
+        }
+
+        .unlink-anchor {
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-loader .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }

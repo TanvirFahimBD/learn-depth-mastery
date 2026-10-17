@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" /> -->
+</head>
+<body>
+
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false" id="city-input">
+            <button><img src="./assets/search.png" alt="" id="search-btn"></button>
+        </div>
+
+        <div class="weather">
+            <img src="./assets/rain.png" alt="" class="weather-icon">
+            <h1 id="temp">25°C</h1>
+            <h2 id="city">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./assets/humidity.png" alt="">
+                    <div>
+                        <p id="humidity">65%</p>
+                        <span>Humidity</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="./assets/wind.png" alt="">
+                    <div>
+                        <p id="wind-speed">50 km/h</p>
+                        <span>Wind Speed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" ></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

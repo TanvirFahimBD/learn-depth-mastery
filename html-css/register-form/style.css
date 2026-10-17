@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #673AB7;
+    font-family: 'Poppins', sans-serif;
+}
+form{
+    width: 500px;
+    /* height: 100vh; */
+    margin: 8% auto;
+    padding: 50px 0;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0);
+}
+.input-box{
+    margin: 30px auto;
+    width: 80%;
+    position: relative;
+    box-shadow: 0 8px 10px -10px rgba(0,0,0);
+}
+.input-box input{
+    width: 80%;
+    height: 40px;
+    border: none;
+    background: #efefef;
+    padding-left: 50px;
+}
+span{
+    position: absolute;
+    line-height: 37px;
+    left: 14px;
+    top: 0px;
+    height: 42px;
+    width: 43px;
+    background: linear-gradient(to right, #4caf50, #00BCD4);
+}
+span .fa-solid{
+    padding: 10px;
+    color: #fff;
+}
+
+button{
+    display: block;
+    width: 130px;
+    height: auto;
+    margin-left: 12%;
+    padding: 10px 20px;
+    color: #fff;
+    border: 0;
+    font-size: 15px;
+    outline: none;
+    background: linear-gradient(to right, #4caf50, #00BCD4);
+    box-shadow: 0 8px 10px -10px rgba(0,0,0);
+    cursor: pointer;
+}
+
+button .fa-solid{
+    margin-right: 10px;
+}
+
+form > .fa-user{
+    position: absolute;
+    margin: 0 auto;
+    margin-top: -100px;
+    z-index: 1;
+    background-color: #673AB7;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 20px;
+}

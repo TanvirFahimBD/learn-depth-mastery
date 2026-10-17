@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "HydroMax Stainless Bottle",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8",
+    "price": 19.99,
+    "size": "500ml",
+    "color": "Black",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "name": "PureFlow Sports Bottle",
+    "image": "https://images.unsplash.com/photo-1523362628745-0c100150b504",
+    "price": 24.99,
+    "size": "750ml",
+    "color": "Blue",
+    "stock": 10
+  },
+  {
+    "id": 3,
+    "name": "EcoSip Water Bottle",
+    "image": "https://images.unsplash.com/photo-1610824352934-c10d87b700cc",
+    "price": 17.99,
+    "size": "600ml",
+    "color": "Green",
+    "stock": 10
+  },
+  {
+    "id": 4,
+    "name": "Arctic Chill Flask",
+    "image": "https://images.unsplash.com/photo-1625772452859-1c03d5bf1137",
+    "price": 29.99,
+    "size": "1L",
+    "color": "Silver",
+    "stock": 10
+  },
+  {
+    "id": 5,
+    "name": "Urban Trek Bottle",
+    "image": "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
+    "price": 21.99,
+    "size": "650ml",
+    "color": "White",
+    "stock": 10
+  },
+  {
+    "id": 6,
+    "name": "Summit Pro Hydration",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "price": 34.99,
+    "size": "1.2L",
+    "color": "Red",
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "name": "Crystal Wave Bottle",
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd",
+    "price": 14.99,
+    "size": "550ml",
+    "color": "Transparent",
+    "stock": 10
+  },
+  {
+    "id": 8,
+    "name": "Titan Steel Flask",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f",
+    "price": 27.99,
+    "size": "900ml",
+    "color": "Gray",
+    "stock": 10
+  },
+  {
+    "id": 9,
+    "name": "ActiveGo Fitness Bottle",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "price": 16.99,
+    "size": "700ml",
+    "color": "Orange",
+    "stock": 10
+  },
+  {
+    "id": 10,
+    "name": "Elite Vacuum Bottle",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "price": 39.99,
+    "size": "1.5L",
+    "color": "Navy Blue",
+    "stock": 10
+  }
+]
