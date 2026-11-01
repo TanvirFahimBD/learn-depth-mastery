@@ -46,3 +46,17 @@ const greet = (name: string, greeting: string = "Hello") => {
 };
 greet("Alice"); // Output: Hello, Alice!
 greet("Bob", "Hi"); // Output: Hi, Bob!
+
+// 1-9: Rest Parameters in function
+function sumAll(...numbers: number[]): number {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+console.log(sumAll(1, 2, 3, 4, 5)); // Output: 15
+console.log(sumAll(10, 20)); // Output: 30  
+
+const logUserAction = (...args: [name: string, age: number, isActive: boolean]) => {
+    const [name, age, isActive] = args;
+    console.log(`User ${name} (Age: ${age}) is ${isActive ? 'active' : 'inactive'}`);
+};
+logUserAction("Alice", 30, true); // Output: User Alice (Age: 30) is active
+logUserAction("Bob", 25, false); // Output: User Bob (Age: 25) is inactive
