@@ -60,3 +60,46 @@ const logUserAction = (...args: [name: string, age: number, isActive: boolean]) 
 };
 logUserAction("Alice", 30, true); // Output: User Alice (Age: 30) is active
 logUserAction("Bob", 25, false); // Output: User Bob (Age: 25) is inactive
+
+
+//1-10: Object, Type Alias and Interface
+//type alias
+type TUser = {
+    name: string;
+    age: number;
+    isActive: boolean;
+    Address: Address;
+};
+
+//generic type for more prefereable type alias 
+type Address = {
+ streetName: string;
+ holdingNumber: number;
+}
+
+
+const user1: TUser = {
+    name: "Alice",
+    age: 30,
+    isActive: true,
+    Address: {
+      streetName: "123 Main St",
+      holdingNumber: 123
+    }
+};
+
+// user.email = "test@gmail.com"; // Error: Property 'email' does not exist on type 'TUser'.
+
+
+//interface - ts it priority to interface over type alias when both are present
+interface IUser {
+    name: string;
+    age: number;
+    isActive: boolean;
+} 
+
+const user2: IUser = {
+    name: "Alice",
+    age: 30,
+    isActive: true
+};
