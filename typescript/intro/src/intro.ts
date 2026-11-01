@@ -28,3 +28,21 @@ const dataLatLong: [number, number] = [40.7128, -74.0060];
 
 //tuple with readonly modifier - cannot change the values
 const dataLatLong2: readonly [number, number] = [40.7128, -74.0060]; 
+
+
+// 1-8: Optional, Default Parameters in function
+
+// Optional parameter: firstName is optional
+function fullName(lastName: string, firstName?: string) {
+    return `${firstName} ${lastName}`;
+}
+console.log(fullName("Alice")); // Output: Alice
+console.log(fullName("Alice", "John")); // Output: John Alice
+
+
+// Default parameter: greeting has a default value of "Hello"
+const greet = (name: string, greeting: string = "Hello") => {
+    console.log(`${greeting}, ${name}!`);
+};
+greet("Alice"); // Output: Hello, Alice!
+greet("Bob", "Hi"); // Output: Hi, Bob!
