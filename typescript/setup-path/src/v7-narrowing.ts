@@ -36,9 +36,77 @@ const showAddress = (user: User) => {
 showAddress(loggedUser);
 showAddress(null);
 
-// equality
+// some caveat of Type Guard
+const printAll = (x: string | string[] | null) => {
+    if(x !== null) {
+        if(x && typeof x === 'object') {
+            for(const s of x) {
+                console.log(s);
+            }               
+        } else if(typeof x === 'string') {
+            console.log(x);
+        } else {
+            throw new Error('This should not happen');
+        }
+    }
+}
+printAll(null);
 
+// equality
+const printAll2 = (x: string | string[] | null) => {
+    if(x !== null) {
+        if(typeof x === 'object') {
+            for(const s of x) {
+                console.log(s);
+            }               
+        } else if(typeof x === 'string') {
+            console.log(x);
+        }  
+    }
+    console.log("");    
+}
+printAll2("only string");
 
 // in operator
+type Bird = {fly: () => void};
+type Fish = {swim: () => void};
+const move = (animal: Bird | Fish) => {
+    if('fly' in animal) {
+        return animal.fly();
+    }
+    return animal.swim();
+}
+
 // instanceof check
-// discriminated union
+const showDate = (x: Date | string) => {
+    if(x instanceof Date) {
+        console.log(x.toUTCString());
+        return;
+    } 
+
+    const date = new Date(x);
+    console.log(date.toUTCString());
+}
+showDate(new Date());
+showDate('2024-06-01T12:00:00Z');
+
+// discriminated union 
+interface Circle {
+    kind: 'circle';
+    radius: number;
+}
+interface Square {
+    kind: 'square';
+    sideLength: number;
+}
+type Shape = Circle | Square;
+const area = (shape: Shape) => {
+    if(shape.kind === 'circle') {
+        return Math.PI * shape.radius ** 2;
+    }
+    if(shape.kind === 'square') {
+        return shape.sideLength ** 2;
+    }
+}
+console.log(area({kind: 'circle', radius: 5}));
+console.log(area({kind: 'square', sideLength: 4}));
