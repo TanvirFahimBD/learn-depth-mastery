@@ -1,1 +1,1 @@
-export {};
+import "./inheritance.js";
