@@ -68,7 +68,7 @@ const directoryEntry: PublicEmployee = {
   // nid: "124343"
 }
 
-//record - which taskes fixed property. more or less property if given it will give an error
+//record - which takes fixed property. more or less property if given it will give an error
 type Environment = "development" | "staging" |"production";
 
 const apiUrls: Record<Environment, string> = {
