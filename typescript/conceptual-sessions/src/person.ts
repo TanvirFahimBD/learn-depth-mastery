@@ -1,4 +1,7 @@
 class Person{
+    //encapsulation - data
+    public _balanceTotal?: number;
+
     constructor(public firstname: string, public lastname: string){}   
 
     get fullName(){
@@ -13,8 +16,12 @@ class Person{
         console.log('Walking');        
     }
 
+    //abstraction - method
+    private socialActivityInfo() {}
+
 }
 
+// inheritance-reuse
 class Student extends Person{
     attendClass() {
         console.log('attend on class');
@@ -25,6 +32,7 @@ class Student extends Person{
 
 class Teacher extends Person{
     //override here function
+    // polymorphism - property/method diff way
     override get fullName(){
         //super by call property also
         return "Professor " + super.fullName;
