@@ -1,11 +1,11 @@
 type Toppings = "cheese" | "olive" | "corn";
 
-type Pizza = {
+export type Pizza = {
     name: string
     toppings: Toppings[]
 }
 
-const menu: Pizza[] = [
+export const menu: Pizza[] = [
     {
         name:"pizza 1",
         toppings: ["cheese"]
