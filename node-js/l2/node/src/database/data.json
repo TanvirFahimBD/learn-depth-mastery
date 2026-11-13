@@ -1,6 +1,6 @@
 [
-  { "id": 1, "name": "product1", "price": 230 },
-  { "id": 2, "name": "product2", "price": 130 },
+  { "id": 1, "name": "Shoe", "price": 1500 },
+  { "id": 2, "name": "Shirt", "price": 500 },
   { "id": 1794583021580, "name": "Product3", "price": 430 },
   { "id": 1794583056759, "name": "Product4", "price": 500 }
 ]

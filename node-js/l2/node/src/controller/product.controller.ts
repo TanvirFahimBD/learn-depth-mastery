@@ -45,10 +45,20 @@ const productController = async (req: IncomingMessage, res: ServerResponse) => {
         res.end(JSON.stringify({ message: "Successfully product created", data: products }));
 
     }
+    else if(method === 'PUT' &&  id !== null){
+        const products = productService(req, res);
+        const body = await bodyParser(req);
+        const productIndex = products.findIndex((p: IProduct) => p.id === id);
+        products[productIndex] = {id: id, ...body};
+        const updatedProduct = products[productIndex];
+        createProduct(products);
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ message: "Successfully product updated", data: updatedProduct }));
+    }
 
 
-//   res.writeHead(200, { "Content-Type": "application/json" });
-//   res.end(JSON.stringify({ message: "Product route" }));
+    //   res.writeHead(200, { "Content-Type": "application/json" });
+    //   res.end(JSON.stringify({ message: "Product route" }));
 };
 
 export default productController;
