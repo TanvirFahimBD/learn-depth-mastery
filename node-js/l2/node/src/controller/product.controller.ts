@@ -1,15 +1,36 @@
 import { IncomingMessage, ServerResponse } from "http";
 import productService from "../service/product.service";
+import { IProduct } from '../types/product';
+import { bodyParser } from "../utils/parseBody";
 
-const productController = (req: IncomingMessage, res: ServerResponse) => {
+const productController = async (req: IncomingMessage, res: ServerResponse) => {
     const url = req.url;
     const method = req.method;
 
-    if(url === '/products' && method === 'GET'){
+    const urlParams = url?.split("/");    
+    const id = urlParams && urlParams[1] === "products" ?  Number(urlParams[2])  : null;
+
+    if(method === 'GET' && url === '/products'){
         const products = productService(req, res);
 
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({ message: "Successfully product data get", data: products }));
+
+    }
+    else if(method === 'GET' && id !== null){
+        const products = productService(req, res);
+
+        const singleProduct = products.find((p: IProduct) => p.id === id);
+
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ message: "Successfully product data get", data: singleProduct }));
+
+    }
+    else if(method === 'POST' && url === "/products"){
+        const body = await bodyParser(req);
+
+        res.writeHead(201, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ message: "Successfully product created", data: JSON.parse(body) }));
 
     }
 
