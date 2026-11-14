@@ -1,5 +1,1 @@
-[
-  { "id": 1, "name": "Shoe", "price": 1500 },
-  { "id": 1794583021580, "name": "Product3", "price": 430 },
-  { "id": 1794583056759, "name": "Product4", "price": 500 }
-]
+[{"id":1,"name":"Shoe","price":1500},{"id":1794583021580,"name":"Product 33","price":333},{"id":1794583056759,"name":"Product4","price":500},{"id":1794623854753,"name":"Product6","price":501}]
