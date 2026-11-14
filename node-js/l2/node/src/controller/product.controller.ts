@@ -62,6 +62,21 @@ const productController = async (req: IncomingMessage, res: ServerResponse) => {
         }      
         
     }
+    else if(method === 'DELETE' &&  id !== null){
+        const products = productService(req, res);
+        const productIndex = products.findIndex((p: IProduct) => p.id === id);
+
+        if(productIndex<0){
+            res.writeHead(404, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ message: "Product not found"}));
+        }else{
+            products.splice(productIndex,1);
+            createProduct(products);
+            res.writeHead(200, { "Content-Type": "application/json" });
+            res.end(JSON.stringify({ message: "Successfully product delete" }));
+        }      
+        
+    }
 
 
     //   res.writeHead(200, { "Content-Type": "application/json" });
